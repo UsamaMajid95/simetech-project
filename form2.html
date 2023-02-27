@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Contact Us Page</title>
+</head>
+<body style="background-color: blueviolet;">
+    <div class="container-fluid px-5 my-5">
+        <div class="row justify-content-center">
+          <div class="col-xl-10">
+            <div class="card border-0 rounded-3 shadow-lg overflow-hidden">
+              <div class="card-body p-0">
+                <div class="row g-0">
+                  <div class="col-sm-6 d-none d-sm-block bg-image"> 
+                    <img src="m1.png" style="margin: 35%;">
+                    </div>
+                  <div class="col-sm-6 p-4">
+                    <div class="text-center">
+                      <div class="h3 fw-light">Contact Form</div>
+                      <p class="mb-4 text-muted">Split layout contact form</p>
+                    </div>
+      
+      
+                    <form id="contactForm" data-sb-form-api-token="API_TOKEN" action="" method="post" enctype="multipart/form-data">
+      
+                      <!-- Name Input -->
+                      <div class="form-floating mb-3">
+                        <input class="form-control" id="name" name="name" type="text" placeholder="Name" data-sb-validations="required" required/>
+                        <label for="name">Name</label>
+                        
+            
+                        <div class="invalid-feedback" data-sb-feedback="name:required">Name is required.</div>
+                      </div>
+      
+                      <!-- Email Input -->
+                      <div class="form-floating mb-3">
+                        <input class="form-control" id="email" name="email" type="email" placeholder="Email Address" data-sb-validations="required,email" required/>
+                        <label for="emailAddress">Email Address</label><br>
+
+                        <input  name="gender" id="gender" type="checkbox" value="male" data-sb-validations="required,gender" />Male
+                        <input  name="gender" id="gender" type="checkbox" value="female" data-sb-validations="required,gender" />Female<br><br>
+                        <input type="file" id="file" name="file" class="upload" required><br>
+                         
+                        
+                      </div>
+            
+                      <!-- Message Input -->
+                      <div class="form-floating mb-3">
+                        <textarea class="form-control" id="message" name="message" type="text" placeholder="Message" style="height: 10rem;"  required></textarea>
+                        <label for="message">Message</label><br>
+
+                        <select class="form-control" id="city" name="city" required>
+                            <option value="минск">минск</option>
+                            <option value="гомель">гомель</option>
+                            <option value="брест">брест</option>
+                            <option value="витебск">витебск</option>
+                            <option value="гродно">гродно</option>
+                            <option value="могилёв">могилёв</option>
+                        </select>City<br>
+                            
+                        <div class="invalid-feedback" data-sb-feedback="message:required">Message is required.</div>
+                      </div>
+                        
+                      
+      
+                      
+                      <!-- Submit button -->
+                      <div class="d-grid">
+                        <button class="btn btn-primary btn-lg disabled" id="submit" type="submit" style="background-color: green;">Submit</button>
+                        <button class="btn btn-primary btn-lg disabled" id="reset" type="reset" style="background-color: green;">RESET</button>
+                        <div class="alert alert-success" id="mydiv" ></div>
+
+                    </div>
+                    </form>
+                    <!-- End of contact form -->
+      
+                  </div>
+                </div>
+      
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  <script type="text/javascript" src="form.js"></script>
+</body>
+</html>
